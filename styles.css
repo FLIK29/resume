@@ -1,0 +1,252 @@
+/* ============================================
+   Custom styles that complement Tailwind CSS.
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.7);
+}
+
+/* --- Nav links --- */
+.nav-link {
+  color: inherit;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* --- Section headers --- */
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+}
+.dark .section-tag {
+  color: #818cf8;
+}
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* --- Scroll reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Filter buttons --- */
+.filter-btn {
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.filter-btn:hover {
+  border-color: #6366f1;
+}
+.filter-btn.active {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+}
+
+/* --- Card fade transition when filtering --- */
+.filter-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.filter-item.filtered-out {
+  opacity: 0;
+  transform: scale(0.95);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* --- Skill card --- */
+.skill-card {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.dark .skill-card {
+  background: rgba(15, 23, 42, 0.5);
+}
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+.skill-bar-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(148, 163, 184, 0.25);
+  overflow: hidden;
+  margin-top: 0.6rem;
+}
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #6366f1, #4f46e5);
+  width: 0%;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Project card --- */
+.project-card {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.dark .project-card {
+  background: rgba(15, 23, 42, 0.5);
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
+}
+.tech-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+}
+.dark .tech-badge {
+  background: rgba(129, 140, 248, 0.15);
+  color: #a5b4fc;
+}
+
+/* --- Timeline --- */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 2px;
+  background: linear-gradient(to bottom, #6366f1, transparent);
+}
+.timeline-dot {
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #4f46e5;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+.dark .timeline-dot {
+  border-color: #020617;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 2.5rem;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.accordion-header {
+  cursor: pointer;
+  user-select: none;
+}
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.accordion-body.open {
+  max-height: 500px;
+}
+.accordion-chevron {
+  transition: transform 0.3s ease;
+}
+.accordion-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* --- Forms --- */
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.form-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: transparent;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.form-input.input-error {
+  border-color: #ef4444;
+}
+.form-error {
+  min-height: 1.1rem;
+  font-size: 0.78rem;
+  color: #ef4444;
+  margin-top: 0.3rem;
+}
+
+/* --- Toast --- */
+#toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  transform: translateY(150%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#toast.show {
+  transform: translateY(0);
+}

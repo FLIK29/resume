@@ -3,280 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alexander Elizalde</title>
-<style>
-  :root {
-    --primary: #2563eb;
-    --primary-dark: #1e40af;
-    --text: #1f2937;
-    --muted: #6b7280;
-    --bg: #f3f4f6;
-    --card: #ffffff;
-    --border: #e5e7eb;
-  }
+<title>Jesus Alexander Ramirez Elizalde | Ingeniero en Desarrollo de Software</title>
+<meta name="description" content="Portafolio y CV interactivo de Jesus Alexander Ramirez Elizalde, Ingeniero en Desarrollo de Software.">
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.5;
-    padding: 40px 20px;
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'sans-serif'] },
+        colors: {
+          brand: {
+            50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+            400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
+            800: '#3730a3', 900: '#312e81'
+          }
+        },
+        animation: {
+          'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+          'blob': 'blob 8s infinite'
+        },
+        keyframes: {
+          fadeInUp: {
+            '0%': { opacity: 0, transform: 'translateY(20px)' },
+            '100%': { opacity: 1, transform: 'translateY(0)' }
+          },
+          blob: {
+            '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }
+          }
+        }
+      }
+    }
   }
+</script>
 
-  .cv-container {
-    max-width: 850px;
-    margin: 0 auto;
-    background: var(--card);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-
-  header {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: #fff;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  header h1 {
-    font-size: 2rem;
-    letter-spacing: 0.5px;
-  }
-
-  header .title {
-    font-size: 1.1rem;
-    font-weight: 300;
-    opacity: 0.95;
-  }
-
-  .contact-info {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 0.9rem;
-  }
-
-  .contact-info span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    opacity: 0.95;
-  }
-
-  main {
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 32px;
-  }
-
-  @media (max-width: 640px) {
-    main { grid-template-columns: 1fr; }
-  }
-
-  section {
-    margin-bottom: 28px;
-  }
-
-  h2 {
-    font-size: 1.05rem;
-    color: var(--primary-dark);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 6px;
-    margin-bottom: 14px;
-  }
-
-  .sidebar h2 {
-    font-size: 0.95rem;
-  }
-
-  .item {
-    margin-bottom: 18px;
-  }
-
-  .item-title {
-    font-weight: 600;
-    color: var(--text);
-  }
-
-  .item-subtitle {
-    font-size: 0.9rem;
-    color: var(--muted);
-    margin-bottom: 4px;
-  }
-
-  .item-desc {
-    font-size: 0.92rem;
-    color: var(--text);
-  }
-
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .skill-tags span {
-    background: #eef2ff;
-    color: var(--primary-dark);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-  }
-
-  .bar {
-    background: var(--border);
-    border-radius: 6px;
-    height: 8px;
-    overflow: hidden;
-    margin-top: 4px;
-  }
-
-  .bar-fill {
-    height: 100%;
-    background: var(--primary);
-    border-radius: 6px;
-  }
-
-  ul {
-    padding-left: 18px;
-    font-size: 0.92rem;
-  }
-
-  ul li {
-    margin-bottom: 6px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 16px;
-    font-size: 0.8rem;
-    color: var(--muted);
-  }
-
-  @media print {
-    body { background: #fff; padding: 0; }
-    .cv-container { box-shadow: none; border-radius: 0; }
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans antialiased transition-colors duration-300">
 
-<div class="cv-container">
-  <header>
-    <h1>Jesus Alexander Ramirez Elizalde</h1>
-    <div class="title">Estudiante de Ingeniería en Desarrollo de Software - CESUN UNIVERSIDAD</div>
-    <div class="contact-info">
-      <span>📧 jesus.ramirezelizalde@cesunbc.edu.mx</span>
-      <span>📱 +52 665 150 56 69 </span>
-      <span>📍 Tijuana, B.C.</span>
-      <!-- <span>🔗 linkedin.com/in/tu-usuario</span>-->
-      <span>💻 github.com/FLik29</span>
-    </div>
-  </header>
+<!-- ===== NAVBAR ===== -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-white/70 dark:bg-slate-950/70 border-b border-slate-200 dark:border-slate-800">
+  <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#inicio" class="font-bold text-lg tracking-tight text-brand-600 dark:text-brand-400">JARE<span class="text-slate-400 dark:text-slate-600">.dev</span></a>
 
-  <main>
-    <div class="sidebar">
-      <section>
-        <h2>Perfil</h2>
-        <p class="item-desc">
-          Estudiante de Ingeniería en Desarrollo de Software, apasionado por la programación,
-          la resolución de problemas y el aprendizaje continuo de nuevas tecnologías.
-          Busco oportunidades para aplicar y ampliar mis conocimientos en proyectos reales.
-        </p>
-      </section>
-
-      <section>
-        <h2>Habilidades Técnicas</h2>
-        <div class="skill-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Python</span>
-          <span>Java</span>
-          <span>SQL</span>
-          <span>Git</span>
-        </div>
-      </section>
-
-      <section>
-        <h2>Idiomas</h2>
-        <div class="item">
-          <div class="item-title">Español</div>
-          <div class="bar"><div class="bar-fill" style="width: 100%;"></div></div>
-        </div>
-        <div class="item">
-          <div class="item-title">Inglés</div>
-          <div class="bar"><div class="bar-fill" style="width: 70%;"></div></div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Intereses</h2>
-        <ul>
-          <li>Desarrollo web</li>
-          <li>Videojuegos</li>
-          <li>Inteligencia artificial</li>
-          <li>Ciberseguridad</li>
-        </ul>
-      </section>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+      <a href="#habilidades" class="nav-link">Habilidades</a>
+      <a href="#proyectos" class="nav-link">Proyectos</a>
+      <a href="#experiencia" class="nav-link">Experiencia</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
     </div>
 
-    <div class="main-content">
-      <section>
-        <h2>Educación</h2>
-        <div class="item">
-          <div class="item-title">Ingeniería en Desarrollo de Software</div>
-          <div class="item-subtitle">CESUN · 2023 - Presente</div>
-          <p class="item-desc">Estudiante activo cursando la carrera, con enfoque en desarrollo de aplicaciones,
-          bases de datos y estructuras de software.</p>
-        </div>
-        <div class="item">
-          <div class="item-title">Bachillerato</div>
-          <div class="item-subtitle">CBTIS 116 · Tecnico en Informatica</div>
-        </div>
-      </section>
+    <div class="flex items-center gap-3">
+      <button id="darkModeToggle" aria-label="Cambiar tema" class="w-9 h-9 grid place-items-center rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <svg id="iconSun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <svg id="iconMoon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+      </button>
 
-      <section>
-        <h2>Experiencia</h2>
-        <div class="item">
-          <div class="item-title">Proyecto académico / Prácticas</div>
-          <div class="item-subtitle">Nombre de la institución o proyecto · Fecha</div>
-          <p class="item-desc">Describe aquí brevemente tus responsabilidades y logros.</p>
-        </div>
-      </section>
-
-      <section>
-        <h2>Proyectos</h2>
-        <div class="item">
-          <div class="item-title">Nombre del Proyecto</div>
-          <div class="item-subtitle">Tecnologías usadas</div>
-          <p class="item-desc">Breve descripción del proyecto y tu rol en él.</p>
-        </div>
-      </section>
-
-      <section>
-        <h2>Certificaciones</h2>
-        <ul>
-          <li>Nombre de la certificación - Institución (Año)</li>
-        </ul>
-      </section>
+      <button id="mobileMenuBtn" aria-label="Abrir menú" class="md:hidden w-9 h-9 grid place-items-center rounded-full border border-slate-200 dark:border-slate-700">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
-  </main>
+  </nav>
 
-  <footer>
-    CV generado para Jesus Alexander Ramirez Elizalde
-  </footer>
-</div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-5 py-4 flex flex-col gap-4 text-sm font-medium">
+    <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+    <a href="#habilidades" class="nav-link">Habilidades</a>
+    <a href="#proyectos" class="nav-link">Proyectos</a>
+    <a href="#experiencia" class="nav-link">Experiencia</a>
+    <a href="#contacto" class="nav-link">Contacto</a>
+  </div>
+</header>
 
+<!-- ===== HERO ===== -->
+<section id="inicio" class="relative overflow-hidden pt-40 pb-24 px-5 sm:px-8">
+  <div class="absolute top-0 left-1/4 w-72 h-72 bg-brand-300/40 dark:bg-brand-700/20 rounded-full blur-3xl animate-blob"></div>
+  <div class="absolute top-20 right-1/4 w-72 h-72 bg-indigo-300/30 dark:bg-indigo-700/20 rounded-full blur-3xl animate-blob" style="animation-delay:2s"></div>
+
+  <div class="relative max-w-4xl mx-auto text-center">
+    <p class="text-brand-600 dark:text-brand-400 font-semibold tracking-widest uppercase text-sm mb-4 animate-fade-in-up">Hola, soy</p>
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 animate-fade-in-up" style="animation-delay:0.1s">
+      Jesus Alexander <span class="text-brand-600 dark:text-brand-400">Ramirez Elizalde</span>
+    </h1>
+    <h2 class="text-xl sm:text-2xl font-semibold text-slate-600 dark:text-slate-400 mb-4 animate-fade-in-up" style="animation-delay:0.2s">
+      Ingeniero en Desarrollo de Software
+    </h2>
+    <p id="heroSubtitle" class="max-w-2xl mx-auto text-slate-500 dark:text-slate-400 mb-10 animate-fade-in-up" style="animation-delay:0.3s">
+      Construyo software funcional, escalable y bien pensado — desde la lógica de negocio hasta la experiencia de usuario.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up" style="animation-delay:0.4s">
+      <a href="assets/CV_Jesus_Ramirez.pdf" download class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full font-semibold text-sm transition shadow-lg shadow-brand-600/30">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+        Descargar CV
+      </a>
+      <a id="heroGithub" href="#" target="_blank" rel="noopener" class="w-11 h-11 grid place-items-center rounded-full border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="GitHub">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.5 0 12.3c0 5.43 3.44 10.03 8.2 11.65.6.11.82-.27.82-.6 0-.29-.01-1.06-.02-2.08-3.34.74-4.04-1.65-4.04-1.65-.55-1.42-1.33-1.8-1.33-1.8-1.09-.76.08-.75.08-.75 1.2.09 1.84 1.26 1.84 1.26 1.07 1.86 2.8 1.32 3.49 1.01.11-.79.42-1.32.76-1.62-2.66-.31-5.47-1.36-5.47-6.05 0-1.34.46-2.43 1.23-3.29-.12-.31-.53-1.56.12-3.25 0 0 1-.33 3.3 1.26a11.2 11.2 0 016 0c2.29-1.59 3.29-1.26 3.29-1.26.66 1.69.24 2.94.12 3.25.77.86 1.23 1.95 1.23 3.29 0 4.7-2.81 5.74-5.49 6.04.43.38.81 1.13.81 2.29 0 1.65-.02 2.98-.02 3.39 0 .33.22.72.83.6C20.57 22.32 24 17.72 24 12.3 24 5.5 18.63 0 12 0z"/></svg>
+      </a>
+      <a id="heroLinkedin" href="#" target="_blank" rel="noopener" class="w-11 h-11 grid place-items-center rounded-full border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="LinkedIn">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+      </a>
+      <a id="heroEmail" href="#" class="w-11 h-11 grid place-items-center rounded-full border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Email">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOBRE MI ===== -->
+<section id="sobre-mi" class="max-w-4xl mx-auto px-5 sm:px-8 py-20 reveal">
+  <span class="section-tag">01. Perfil</span>
+  <h2 class="section-title">Sobre mí</h2>
+  <p id="aboutText" class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg"></p>
+
+  <div id="aboutStrengths" class="grid sm:grid-cols-3 gap-4 mt-10"></div>
+</section>
+
+<!-- ===== HABILIDADES ===== -->
+<section id="habilidades" class="max-w-6xl mx-auto px-5 sm:px-8 py-20 reveal">
+  <span class="section-tag">02. Skills</span>
+  <h2 class="section-title mb-8">Habilidades Técnicas</h2>
+
+  <div id="skillsFilters" class="flex flex-wrap gap-3 mb-10"></div>
+  <div id="skillsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</section>
+
+<!-- ===== PROYECTOS ===== -->
+<section id="proyectos" class="max-w-6xl mx-auto px-5 sm:px-8 py-20 reveal">
+  <span class="section-tag">03. Trabajo</span>
+  <h2 class="section-title mb-8">Proyectos Destacados</h2>
+
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+    <div id="projectFilters" class="flex flex-wrap gap-3"></div>
+
+    <div class="relative w-full md:w-72">
+      <svg class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input id="projectSearch" type="text" placeholder="Buscar proyectos o tecnologías..."
+        class="w-full pl-10 pr-4 py-2.5 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
+    </div>
+  </div>
+
+  <div id="projectsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <p id="noProjectsMsg" class="hidden text-center text-slate-400 py-16">No se encontraron proyectos que coincidan con tu búsqueda.</p>
+</section>
+
+<!-- ===== EXPERIENCIA & EDUCACION ===== -->
+<section id="experiencia" class="max-w-4xl mx-auto px-5 sm:px-8 py-20 reveal">
+  <span class="section-tag">04. Trayectoria</span>
+  <h2 class="section-title mb-12">Experiencia &amp; Educación</h2>
+  <div id="timelineContainer" class="relative"></div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section id="contacto" class="max-w-3xl mx-auto px-5 sm:px-8 py-20 reveal">
+  <span class="section-tag">05. Contacto</span>
+  <h2 class="section-title mb-4">Hablemos</h2>
+  <p class="text-slate-500 dark:text-slate-400 mb-10">
+    ¿Tienes un proyecto en mente o una oportunidad? Escríbeme y te responderé lo antes posible.
+  </p>
+
+  <form id="contactForm" novalidate class="grid sm:grid-cols-2 gap-5">
+    <div class="sm:col-span-1">
+      <label for="name" class="form-label">Nombre</label>
+      <input id="name" name="name" type="text" class="form-input" placeholder="Tu nombre">
+      <p class="form-error" data-error-for="name"></p>
+    </div>
+
+    <div class="sm:col-span-1">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input id="email" name="email" type="email" class="form-input" placeholder="tucorreo@ejemplo.com">
+      <p class="form-error" data-error-for="email"></p>
+    </div>
+
+    <div class="sm:col-span-2">
+      <label for="subject" class="form-label">Asunto</label>
+      <input id="subject" name="subject" type="text" class="form-input" placeholder="¿De qué se trata?">
+      <p class="form-error" data-error-for="subject"></p>
+    </div>
+
+    <div class="sm:col-span-2">
+      <label for="message" class="form-label">Mensaje</label>
+      <textarea id="message" name="message" rows="5" class="form-input resize-none" placeholder="Cuéntame más..."></textarea>
+      <p class="form-error" data-error-for="message"></p>
+    </div>
+
+    <div class="sm:col-span-2 flex items-center gap-4">
+      <button id="submitBtn" type="submit" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full font-semibold text-sm transition shadow-lg shadow-brand-600/30">
+        <span id="submitBtnText">Enviar mensaje</span>
+      </button>
+      <p id="formStatus" class="text-sm"></p>
+    </div>
+  </form>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-5 sm:px-8">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
+    <p>© <span id="currentYear"></span> Jesus Alexander Ramirez Elizalde. Todos los derechos reservados.</p>
+    <div class="flex items-center gap-5">
+      <a href="#inicio" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Volver arriba ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="px-5 py-3 rounded-xl shadow-2xl font-medium text-sm text-white"></div>
+
+<script src="main.js"></script>
 </body>
 </html>
