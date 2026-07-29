@@ -76,8 +76,8 @@ function Hero() {
             <Button href={profile.cvUrl} download icon={<Download size={16} />}>
               Descargar CV
             </Button>
-            <Button href="#proyectos" variant="secondary">
-              Ver proyectos
+            <Button href="#contacto" variant="secondary">
+              Contactarme
             </Button>
           </motion.div>
         </motion.div>

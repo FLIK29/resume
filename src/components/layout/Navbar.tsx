@@ -10,8 +10,6 @@ const NAV_ITEMS = [
   { id: "sobre-mi", label: "Sobre mí" },
   { id: "educacion", label: "Educación" },
   { id: "tecnologias", label: "Tecnologías" },
-  { id: "proyectos", label: "Proyectos" },
-  { id: "experiencia", label: "Experiencia" },
   { id: "contacto", label: "Contacto" },
 ];
 
