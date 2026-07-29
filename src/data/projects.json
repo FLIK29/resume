@@ -1,0 +1,62 @@
+[
+  {
+    "id": "proyecto-1",
+    "title": "Próximo proyecto",
+    "description": "Aquí aparecerá la descripción de un proyecto real: el problema que resuelve, las decisiones técnicas y el resultado.",
+    "tech": ["Próximamente"],
+    "image": null,
+    "githubUrl": null,
+    "demoUrl": null,
+    "placeholder": true
+  },
+  {
+    "id": "proyecto-2",
+    "title": "Próximo proyecto",
+    "description": "Aquí aparecerá la descripción de un proyecto real: el problema que resuelve, las decisiones técnicas y el resultado.",
+    "tech": ["Próximamente"],
+    "image": null,
+    "githubUrl": null,
+    "demoUrl": null,
+    "placeholder": true
+  },
+  {
+    "id": "proyecto-3",
+    "title": "Próximo proyecto",
+    "description": "Aquí aparecerá la descripción de un proyecto real: el problema que resuelve, las decisiones técnicas y el resultado.",
+    "tech": ["Próximamente"],
+    "image": null,
+    "githubUrl": null,
+    "demoUrl": null,
+    "placeholder": true
+  },
+  {
+    "id": "proyecto-4",
+    "title": "Próximo proyecto",
+    "description": "Aquí aparecerá la descripción de un proyecto real: el problema que resuelve, las decisiones técnicas y el resultado.",
+    "tech": ["Próximamente"],
+    "image": null,
+    "githubUrl": null,
+    "demoUrl": null,
+    "placeholder": true
+  },
+  {
+    "id": "proyecto-5",
+    "title": "Próximo proyecto",
+    "description": "Aquí aparecerá la descripción de un proyecto real: el problema que resuelve, las decisiones técnicas y el resultado.",
+    "tech": ["Próximamente"],
+    "image": null,
+    "githubUrl": null,
+    "demoUrl": null,
+    "placeholder": true
+  },
+  {
+    "id": "proyecto-6",
+    "title": "Próximo proyecto",
+    "description": "Aquí aparecerá la descripción de un proyecto real: el problema que resuelve, las decisiones técnicas y el resultado.",
+    "tech": ["Próximamente"],
+    "image": null,
+    "githubUrl": null,
+    "demoUrl": null,
+    "placeholder": true
+  }
+]

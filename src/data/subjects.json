@@ -1,0 +1,15 @@
+[
+  { "name": "Programación Orientada a Objetos" },
+  { "name": "Fundamentos de Programación" },
+  { "name": "Arquitectura de Computadoras" },
+  { "name": "Arquitectura de Software" },
+  { "name": "Base de Datos" },
+  { "name": "Sistemas Operativos" },
+  { "name": "Desarrollo de Software Backend I" },
+  { "name": "Desarrollo de Software Backend II" },
+  { "name": "Desarrollo de Software Frontend I" },
+  { "name": "Desarrollo de Software Empresarial" },
+  { "name": "Modelado y Diseño" },
+  { "name": "Realidad Virtual con Unity" },
+  { "name": "Desarrollo de Apps Móviles" }
+]

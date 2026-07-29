@@ -1,0 +1,18 @@
+[
+  {
+    "category": "Lenguajes",
+    "items": ["HTML", "CSS", "JavaScript", "TypeScript", "C#", "SQL"]
+  },
+  {
+    "category": "Frontend",
+    "items": ["React", "Vite", "Tailwind CSS"]
+  },
+  {
+    "category": "Backend & Datos",
+    "items": [".NET", "SQLite"]
+  },
+  {
+    "category": "Herramientas",
+    "items": ["Git", "GitHub", "Unity", "Visual Studio", "Visual Studio Code"]
+  }
+]

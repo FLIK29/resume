@@ -1,0 +1,14 @@
+{
+  "name": "Alexander Elizalde",
+  "shortName": "Alexander",
+  "role": "Estudiante de Ingeniería en Desarrollo de Software",
+  "tagline": "Construyendo aplicaciones modernas mientras continúo mi formación como desarrollador.",
+  "photo": "/photo.jpg",
+  "cvUrl": "/cv.pdf",
+  "about": [
+    "Soy estudiante de Ingeniería en Desarrollo de Software en CESUN Universidad, actualmente cursando el 6.º cuatrimestre en modalidad en línea.",
+    "La modalidad en línea me ha permitido desarrollar disciplina, organización, autonomía y la capacidad de aprender de forma independiente, mientras complemento mi formación académica con proyectos personales.",
+    "Me interesa especialmente el desarrollo web, la arquitectura de software y la creación de aplicaciones modernas.",
+    "Busco mi primera oportunidad profesional como desarrollador, donde pueda seguir aprendiendo, colaborar con un equipo y aportar valor desde el primer día."
+  ]
+}
