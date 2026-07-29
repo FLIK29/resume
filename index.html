@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesus Alexander Ramirez Elizalde - CV</title>
+<style>
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --bg: #f3f4f6;
+    --card: #ffffff;
+    --border: #e5e7eb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 40px 20px;
+  }
+
+  .cv-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  }
+
+  header .title {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.95;
+  }
+
+  .contact-info {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.9rem;
+  }
+
+  .contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.95;
+  }
+
+  main {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+  }
+
+  @media (max-width: 640px) {
+    main { grid-template-columns: 1fr; }
+  }
+
+  section {
+    margin-bottom: 28px;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+
+  .sidebar h2 {
+    font-size: 0.95rem;
+  }
+
+  .item {
+    margin-bottom: 18px;
+  }
+
+  .item-title {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .item-subtitle {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .item-desc {
+    font-size: 0.92rem;
+    color: var(--text);
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tags span {
+    background: #eef2ff;
+    color: var(--primary-dark);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .bar {
+    background: var(--border);
+    border-radius: 6px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 6px;
+  }
+
+  ul {
+    padding-left: 18px;
+    font-size: 0.92rem;
+  }
+
+  ul li {
+    margin-bottom: 6px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .cv-container { box-shadow: none; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cv-container">
+  <header>
+    <h1>Jesus Alexander Ramirez Elizalde</h1>
+    <div class="title">Estudiante de Ingeniería en Desarrollo de Software</div>
+    <div class="contact-info">
+      <span>📧 tu.correo@ejemplo.com</span>
+      <span>📱 +52 000 000 0000</span>
+      <span>📍 Tu Ciudad, País</span>
+      <span>🔗 linkedin.com/in/tu-usuario</span>
+      <span>💻 github.com/tu-usuario</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="sidebar">
+      <section>
+        <h2>Perfil</h2>
+        <p class="item-desc">
+          Estudiante de Ingeniería en Desarrollo de Software, apasionado por la programación,
+          la resolución de problemas y el aprendizaje continuo de nuevas tecnologías.
+          Busco oportunidades para aplicar y ampliar mis conocimientos en proyectos reales.
+        </p>
+      </section>
+
+      <section>
+        <h2>Habilidades Técnicas</h2>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>Java</span>
+          <span>SQL</span>
+          <span>Git</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <div class="item">
+          <div class="item-title">Español</div>
+          <div class="bar"><div class="bar-fill" style="width: 100%;"></div></div>
+        </div>
+        <div class="item">
+          <div class="item-title">Inglés</div>
+          <div class="bar"><div class="bar-fill" style="width: 70%;"></div></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Intereses</h2>
+        <ul>
+          <li>Desarrollo web</li>
+          <li>Videojuegos</li>
+          <li>Inteligencia artificial</li>
+          <li>Ciberseguridad</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="main-content">
+      <section>
+        <h2>Educación</h2>
+        <div class="item">
+          <div class="item-title">Ingeniería en Desarrollo de Software</div>
+          <div class="item-subtitle">Nombre de la Universidad · 2023 - Presente</div>
+          <p class="item-desc">Estudiante activo cursando la carrera, con enfoque en desarrollo de aplicaciones,
+          bases de datos y estructuras de software.</p>
+        </div>
+        <div class="item">
+          <div class="item-title">Bachillerato</div>
+          <div class="item-subtitle">Nombre de la Institución · Año - Año</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experiencia</h2>
+        <div class="item">
+          <div class="item-title">Proyecto académico / Prácticas</div>
+          <div class="item-subtitle">Nombre de la institución o proyecto · Fecha</div>
+          <p class="item-desc">Describe aquí brevemente tus responsabilidades y logros.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Proyectos</h2>
+        <div class="item">
+          <div class="item-title">Nombre del Proyecto</div>
+          <div class="item-subtitle">Tecnologías usadas</div>
+          <p class="item-desc">Breve descripción del proyecto y tu rol en él.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certificaciones</h2>
+        <ul>
+          <li>Nombre de la certificación - Institución (Año)</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    CV generado para Jesus Alexander Ramirez Elizalde
+  </footer>
+</div>
+
+</body>
+</html>
