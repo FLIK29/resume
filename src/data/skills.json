@@ -1,15 +1,15 @@
 [
   {
     "category": "Lenguajes",
-    "items": ["HTML", "CSS", "JavaScript", "TypeScript", "C#", "SQL"]
+    "items": ["HTML5", "JavaScript", "TypeScript", "SQL"]
   },
   {
     "category": "Frontend",
-    "items": ["React", "Vite", "Tailwind CSS"]
+    "items": ["Bootstrap", "CSS3"]
   },
   {
     "category": "Backend & Datos",
-    "items": [".NET", "SQLite"]
+    "items": ["SQLite", "SQL Server"]
   },
   {
     "category": "Herramientas",
