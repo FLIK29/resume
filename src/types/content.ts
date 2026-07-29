@@ -49,6 +49,5 @@ export interface ExperienceItem {
 export interface SocialLinks {
   email: string;
   github: string;
-  linkedin: string;
   location: string;
 }

@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUp, Github, Mail } from "lucide-react";
 import Container from "../ui/Container";
 import profile from "../../data/profile.json";
 import social from "../../data/social.json";
@@ -22,15 +22,6 @@ function Footer() {
             className="text-ink-faint transition-colors duration-200 hover:text-ink"
           >
             <Github size={18} />
-          </a>
-          <a
-            href={social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="text-ink-faint transition-colors duration-200 hover:text-ink"
-          >
-            <Linkedin size={18} />
           </a>
           <a
             href={`mailto:${social.email}`}
