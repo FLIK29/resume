@@ -4,6 +4,12 @@ import SectionHeading from "../ui/SectionHeading";
 import Reveal from "../ui/Reveal";
 import profile from "../../data/profile.json";
 
+const FACTS = [
+  { icon: GraduationCap, label: "Formación", value: "CESUN Universidad" },
+  { icon: Laptop, label: "Modalidad", value: "En línea" },
+  { icon: Code2, label: "Enfoque", value: "Desarrollo web" },
+  { icon: Target, label: "Objetivo", value: "Primer empleo dev" },
+];
 
 function About() {
   return (
@@ -22,6 +28,22 @@ function About() {
             </div>
           </div>
 
+          <Reveal delay={0.1} scale>
+            <dl className="grid grid-cols-2 gap-4">
+              {FACTS.map(({ icon: Icon, label, value }) => (
+                <div
+                  key={label}
+                  className="rounded-2xl border border-ink/[0.07] bg-white p-5 shadow-subtle"
+                >
+                  <Icon size={18} className="text-accent" strokeWidth={1.75} />
+                  <dt className="mt-3 text-xs font-medium uppercase tracking-wide text-ink-faint">
+                    {label}
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold text-ink">{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
         </div>
       </Container>
     </section>
