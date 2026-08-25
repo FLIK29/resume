@@ -1,7 +1,7 @@
 [
   {
     "category": "Lenguajes",
-    "items": ["HTML5", "JavaScript", "TypeScript", "SQL"]
+    "items": ["HTML5", "JavaScript", "SQL"]
   },
   {
     "category": "Frontend",
@@ -9,10 +9,10 @@
   },
   {
     "category": "Backend & Datos",
-    "items": ["SQLite", "SQL Server"]
+    "items": ["SQL"]
   },
   {
     "category": "Herramientas",
-    "items": ["Git", "GitHub", "Unity", "Visual Studio", "Visual Studio Code"]
+    "items": ["Git", "GitHub", "Visual Studio", "Visual Studio Code"]
   }
 ]
