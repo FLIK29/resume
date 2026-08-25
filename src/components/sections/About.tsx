@@ -4,6 +4,12 @@ import SectionHeading from "../ui/SectionHeading";
 import Reveal from "../ui/Reveal";
 import profile from "../../data/profile.json";
 
+const FACTS = [
+  { icon: GraduationCap, label: "Formación", value: "CESUN Universidad" },
+  { icon: Laptop, label: "Modalidad", value: "En línea" },
+  { icon: Code2, label: "Enfoque", value: "Desarrollo web" },
+  { icon: Target, label: "Objetivo", value: "Primer empleo dev" },
+];
 
 function About() {
   return (
